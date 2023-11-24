@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pysungrowreader"
+version = "0.0.1"
+description = "Query Sungrow residential hybrid or string inverters for current state and statistics using ModBus TCP client and push to Redis"
+authors = ["Erik Larsson <karl.erik.larsson@gmail.com>"]
+license = "GNU General Public License"
+readme = "README.md"
+repository = "https://github.com/ortogonal/sungrowreader.git"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sungrowinverter = { git = "https://github.com/ortogonal/SungrowInverter.git", branch = "ortogonal_main" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

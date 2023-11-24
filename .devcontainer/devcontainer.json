@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/python-3
+{
+  "name": "Python 3",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    // Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8 
+    "args": { 
+      "VARIANT": "3.9",
+      "POETRY_VERSION": "1.4.1"
+    }
+  },
+  
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [ 9000 ],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "poetry config virtualenvs.in-project true; poetry install",
+
+  // Comment out to connect as root instead.
+  "remoteUser": "vscode"
+}
