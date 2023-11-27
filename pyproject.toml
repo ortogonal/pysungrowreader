@@ -9,6 +9,7 @@ repository = "https://github.com/ortogonal/sungrowreader.git"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+redis = "^5.0"
 sungrowinverter = { git = "https://github.com/ortogonal/SungrowInverter.git", branch = "ortogonal_main" }
 
 [build-system]
